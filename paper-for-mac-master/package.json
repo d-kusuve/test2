@@ -1,0 +1,18 @@
+{
+  "name": "Paper",
+  "version": "1.1.2",
+  "main": "./main.js",
+  "scripts": {
+    "start": "NODE_ENV='development' electron .",
+    "package": "electron-packager . --overwrite --asar --out ./build/ --app-bundle-id='com.williambout.paper' --osx-sign --icon=./app/img/icon.icns --app-version=$npm_package_version && cd build/Paper-darwin-x64 && zip -ryXq9 ../Paper-osx-${npm_package_version}.zip Paper.app"
+  },
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-packager": "^8.5.1"
+  },
+  "dependencies": {
+    "electron-lets-move": "0.0.5",
+    "electron-spellchecker": "^1.0.4",
+    "electron-window-state": "^4.0.2"
+  }
+}
